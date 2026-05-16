@@ -16,24 +16,57 @@ export default function ProcessStrip() {
         >
           How I work — 推進のアプローチ
         </p>
-        <div className="flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-0">
+
+        {/* Desktop: horizontal flow */}
+        <div className="hidden md:flex items-start">
           {steps.map((step, i) => (
-            <div key={step.number} className="flex md:flex-1 items-start md:items-center gap-4 md:gap-0">
-              <div className="flex md:flex-col items-start md:items-center md:flex-1">
-                <span
-                  className="text-2xl font-bold text-accent-warm"
-                  style={{ fontFamily: 'var(--font-syne)' }}
-                >
-                  {step.number}
-                </span>
-                <div className="ml-3 md:ml-0 md:mt-2 md:text-center">
+            <div key={step.number} className="flex items-start flex-1">
+              <div className="flex flex-col items-center flex-1">
+                <div className="flex items-center gap-3 mb-3">
+                  <span
+                    className="text-2xl font-bold text-accent-warm tabular-nums"
+                    style={{ fontFamily: 'var(--font-syne)' }}
+                  >
+                    {step.number}
+                  </span>
                   <p className="text-sm font-semibold text-ink">{step.label}</p>
-                  <p className="text-xs text-ink-faint mt-0.5">{step.desc}</p>
                 </div>
+                <p className="text-xs text-ink-faint text-center">{step.desc}</p>
               </div>
               {i < steps.length - 1 && (
-                <div className="hidden md:block w-px h-8 bg-ink/10 mx-2" />
+                <div className="flex items-center pt-1.5 px-1">
+                  <svg width="20" height="12" viewBox="0 0 20 12" fill="none">
+                    <path d="M0 6h16M12 1l6 5-6 5" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                  </svg>
+                </div>
               )}
+            </div>
+          ))}
+        </div>
+
+        {/* Mobile: vertical timeline */}
+        <div className="flex flex-col md:hidden gap-0">
+          {steps.map((step, i) => (
+            <div key={step.number} className="flex gap-4">
+              {/* Timeline */}
+              <div className="flex flex-col items-center">
+                <div className="w-8 h-8 rounded-full bg-accent-warm/10 border border-accent-warm/30 flex items-center justify-center flex-shrink-0">
+                  <span
+                    className="text-xs font-bold text-accent-warm"
+                    style={{ fontFamily: 'var(--font-syne)' }}
+                  >
+                    {step.number}
+                  </span>
+                </div>
+                {i < steps.length - 1 && (
+                  <div className="w-px flex-1 bg-turtle-border mt-1 mb-1 min-h-[24px]" />
+                )}
+              </div>
+              {/* Content */}
+              <div className="pb-6">
+                <p className="text-sm font-semibold text-ink leading-none mb-1">{step.label}</p>
+                <p className="text-xs text-ink-faint">{step.desc}</p>
+              </div>
             </div>
           ))}
         </div>

@@ -1,24 +1,27 @@
 'use client'
 
 type Props = {
-  icon: string
+  index: number
   title: string
   description: string
 }
 
-export default function StrengthItem({ icon, title, description }: Props) {
+export default function StrengthItem({ index, title, description }: Props) {
   return (
-    <div className="group flex items-start gap-4 p-4 rounded-lg border border-transparent hover:border-accent-warm/30 hover:translate-x-1.5 transition-all duration-200 cursor-default hover:border-l-2 hover:border-l-accent-warm">
-      <span className="text-2xl flex-shrink-0">{icon}</span>
-      <div>
-        <h3
-          className="text-sm font-semibold text-ink mb-1"
-          style={{ fontFamily: 'var(--font-syne)' }}
-        >
-          {title}
-        </h3>
-        <p className="text-xs text-ink-muted leading-relaxed">{description}</p>
-      </div>
+    <div className="group p-5 border border-turtle-border rounded-lg bg-surface hover:border-accent-warm hover:shadow-sm transition-all duration-200 cursor-default">
+      <p
+        className="text-xs font-bold text-accent-warm mb-2 tabular-nums"
+        style={{ fontFamily: 'var(--font-syne)' }}
+      >
+        {String(index).padStart(2, '0')}
+      </p>
+      <h3
+        className="text-sm font-bold text-ink mb-1.5"
+        style={{ fontFamily: 'var(--font-syne)' }}
+      >
+        {title}
+      </h3>
+      <p className="text-xs text-ink-muted leading-relaxed">{description}</p>
     </div>
   )
 }

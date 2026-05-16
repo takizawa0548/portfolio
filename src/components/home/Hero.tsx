@@ -3,22 +3,18 @@ import StrengthItem from './StrengthItem'
 
 const strengths = [
   {
-    icon: '🗂',
     title: '課題の構造化',
     description: '曖昧な状況を言語化・図解し、チーム全体が理解できる形に整理する。',
   },
   {
-    icon: '🤝',
     title: '関係者を巻き込む推進力',
     description: 'デザイナー・PM・バックエンドと連携し、前進できる場を作る。',
   },
   {
-    icon: '⚙️',
     title: 'チーム改善の実行',
     description: '勉強会・Figma導入・共有会など、開発文化そのものを変える取り組みをリード。',
   },
   {
-    icon: '🖥',
     title: 'UX視点のフロントエンド',
     description: 'コードを書くだけでなく、ユーザー体験の質を上げる判断軸を持つ。',
   },
@@ -66,17 +62,17 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Right column */}
-      <div className="bg-surface-alt border-l border-ink/5 flex flex-col justify-center px-8 md:px-12 py-16 md:py-0">
+      {/* Right column — 2×2 grid */}
+      <div className="bg-surface-alt border-l border-turtle-border flex flex-col justify-center px-8 md:px-12 py-16 md:py-0">
         <p
-          className="text-xs font-semibold tracking-widest uppercase text-ink-faint mb-8"
+          className="text-xs font-semibold tracking-widest uppercase text-ink-faint mb-6"
           style={{ fontFamily: 'var(--font-syne)' }}
         >
           Strengths
         </p>
-        <div className="flex flex-col gap-2 animate-fadeUp delay-300">
-          {strengths.map((s) => (
-            <StrengthItem key={s.title} {...s} />
+        <div className="grid grid-cols-2 gap-3 animate-fadeUp delay-300">
+          {strengths.map((s, i) => (
+            <StrengthItem key={s.title} index={i + 1} title={s.title} description={s.description} />
           ))}
         </div>
       </div>
