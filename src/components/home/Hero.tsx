@@ -53,13 +53,13 @@ export default function Hero() {
         <div className="flex flex-wrap gap-4 animate-fadeUp delay-400">
           <Link
             href="/projects"
-            className="px-6 py-3 rounded-full bg-ink text-surface text-sm font-semibold hover:bg-ink/80 transition-colors"
+            className="px-6 py-3 rounded-full bg-accent-warm text-white text-sm font-semibold hover:bg-accent-warm-hover transition-colors"
           >
             Projects を見る
           </Link>
           <Link
             href="/about"
-            className="px-6 py-3 rounded-full border border-ink/20 text-ink text-sm font-semibold hover:border-ink/40 transition-colors"
+            className="px-6 py-3 rounded-full border border-turtle-border text-ink text-sm font-semibold hover:border-ink/40 hover:bg-surface-alt transition-colors"
           >
             About me
           </Link>

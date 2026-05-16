@@ -39,11 +39,11 @@ export default function ProjectDetail({ project }: Props) {
       </div>
 
       {project.stats.length > 0 && (
-        <div className="flex flex-wrap gap-8 bg-ink text-surface rounded-lg p-6 mb-12">
+        <div className="flex flex-wrap gap-8 bg-accent-warm text-white rounded-lg p-6 mb-12">
           {project.stats.map((stat) => (
             <div key={stat.label}>
               <p
-                className="text-2xl font-bold text-accent-warm"
+                className="text-2xl font-bold text-white"
                 style={{ fontFamily: 'var(--font-syne)' }}
               >
                 {stat.value}

@@ -3,10 +3,10 @@ import { profile } from '@/data/profile'
 
 export default function Footer() {
   return (
-    <footer className="border-t border-ink/10 bg-surface-alt mt-24">
+    <footer className="border-t border-turtle-border bg-surface-alt mt-24">
       <div className="max-w-6xl mx-auto px-6 py-12 flex flex-col md:flex-row items-center justify-between gap-6">
         <p
-          className="text-lg font-bold text-ink"
+          className="text-lg font-bold text-accent-warm"
           style={{ fontFamily: 'var(--font-syne)' }}
         >
           {profile.initials}

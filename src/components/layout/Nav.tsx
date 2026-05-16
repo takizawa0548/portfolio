@@ -15,11 +15,11 @@ export default function Nav() {
   const pathname = usePathname()
 
   return (
-    <nav className="sticky top-0 z-50 bg-surface/90 backdrop-blur-sm border-b border-ink/5">
+    <nav className="sticky top-0 z-50 bg-surface/95 backdrop-blur-sm border-b border-turtle-border">
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <Link
           href="/"
-          className="text-lg font-bold text-ink hover:text-accent-warm transition-colors"
+          className="text-lg font-bold text-accent-warm hover:text-accent-warm-hover transition-colors"
           style={{ fontFamily: 'var(--font-syne)' }}
         >
           {profile.initials}
@@ -32,7 +32,7 @@ export default function Nav() {
               href={href}
               className={`text-sm font-medium transition-colors ${
                 pathname.startsWith(href)
-                  ? 'text-ink'
+                  ? 'text-accent-warm'
                   : 'text-ink-muted hover:text-ink'
               }`}
             >
@@ -43,7 +43,7 @@ export default function Nav() {
 
         <Link
           href="/contact"
-          className="px-4 py-2 rounded-full text-sm font-semibold bg-ink text-surface hover:bg-ink/80 transition-colors"
+          className="px-4 py-2 rounded-full text-sm font-semibold bg-accent-warm text-white hover:bg-accent-warm-hover transition-colors"
         >
           Contact
         </Link>

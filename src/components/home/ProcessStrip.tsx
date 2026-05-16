@@ -8,7 +8,7 @@ const steps = [
 
 export default function ProcessStrip() {
   return (
-    <section className="bg-surface-alt border-y border-ink/10 py-16">
+    <section className="bg-surface-alt border-y border-turtle-border py-16">
       <div className="max-w-6xl mx-auto px-6">
         <p
           className="text-xs font-semibold tracking-widest uppercase text-ink-faint mb-10 text-center"

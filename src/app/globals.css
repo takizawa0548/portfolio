@@ -1,14 +1,40 @@
 @import "tailwindcss";
 
 @theme {
-  --color-ink: #0f0f0f;
-  --color-ink-muted: #555555;
-  --color-ink-faint: #999999;
-  --color-surface: #fafaf8;
-  --color-surface-alt: #f2f1ee;
-  --color-accent-warm: #c8a96e;
-  --color-accent-cool: #4a6fa5;
+  /* ── Turtle UI Kit Color Tokens ── */
 
+  /* Neutral / Text */
+  --color-ink: #1a1a1a;
+  --color-ink-muted: #6b7280;
+  --color-ink-faint: #9ca3af;
+
+  /* Background */
+  --color-surface: #ffffff;
+  --color-surface-alt: #f7f8fa;
+
+  /* Primary — Turtle blue */
+  --color-accent-warm: #4766f4;
+  --color-accent-warm-hover: #3655e8;
+  --color-accent-warm-light: #eef2ff;
+
+  /* Secondary — Turtle teal/green */
+  --color-accent-cool: #10b981;
+  --color-accent-cool-light: #ecfdf5;
+
+  /* Semantic */
+  --color-turtle-success: #10b981;
+  --color-turtle-success-bg: #ecfdf5;
+  --color-turtle-warning: #f59e0b;
+  --color-turtle-warning-bg: #fff7ed;
+  --color-turtle-danger: #ef4444;
+  --color-turtle-danger-bg: #fef2f2;
+  --color-turtle-info: #4766f4;
+  --color-turtle-info-bg: #eef2ff;
+
+  /* Border */
+  --color-turtle-border: #e5e7eb;
+
+  /* Font */
   --font-syne: var(--font-syne);
   --font-noto: var(--font-noto);
 }
